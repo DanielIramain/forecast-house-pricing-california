@@ -9,10 +9,9 @@ from hyperopt.pyll import scope
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import root_mean_squared_error
 
-mlflow.set_tracking_uri("http://127.0.0.1:8080/")
+mlflow.set_tracking_uri("http://127.0.0.1:5000/")
 mlflow.set_experiment("forecast-pricing-hyperopt")
 mlflow.sklearn.autolog(disable=True)
-# mlflow.xgboost.autolog(disable=True)  
 
 def load_pickle():
     '''Load the pickled data'''
