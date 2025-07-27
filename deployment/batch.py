@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import sys
+import argparse
 import pickle
 from pathlib import Path
 
@@ -59,11 +59,13 @@ def apply_model(input_file, run_id, output_file):
     df_result.to_csv(output_file, index=False)
 
 def run():
-    input_name = sys.argv[1] if len(sys.argv) > 1 else 'housing.csv'
-    output_name = sys.argv[2] if len(sys.argv) > 2 else 'housing_output.csv'
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input_name", default="housing.csv", help="Input CSV file name")
+    parser.add_argument("--output_name", default="housing_output.csv", help="Output CSV file name")
+    args = parser.parse_args()
 
-    input_file = f'../orchestration/datasets/housing/{input_name}'
-    output_file = f'output/{output_name}'
+    input_file = f'../orchestration/datasets/housing/{args.input_name}'
+    output_file = f'output/{args.output_name}'
 
     apply_model(input_file=input_file, run_id=run_id, output_file=output_file)
 
@@ -73,4 +75,5 @@ if __name__ == "__main__":
         print("Batch processing completed successfully.")
     except Exception as e:
         print(f"An error occurred: {e}")
+        import sys
         sys.exit(1)
