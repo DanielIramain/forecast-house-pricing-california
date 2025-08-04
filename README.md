@@ -1,14 +1,16 @@
 # California House Pricing Prediction
 This is the DTClub MLOps Zoomcamp 2025 repository. The goal of this project is to apply everything we have learned to an end-to-end machine learning project. The following are some guidelines for running and evaluate it.
-<img width="450" height="450" alt="imagen" src="https://github.com/user-attachments/assets/4f2de027-ac88-4830-9df3-b02c6a0685c3"/>
-<img width="500" height="450" alt="imagen" src="https://github.com/user-attachments/assets/0fb85c8c-c477-4e63-a5f0-4c4c352f0360"/>
 ## Introduction: Problem description
 Let's say that you have a real estate business located in California, USA*. One of the main problems in this field is determining a fair market value for a property based on different factors such as the age of the house, location and proximity to the ocean. 
 Furthermore, you would need this information as soon as possible for every new property available on the market. This is because you will have to negotiate in every house buying and selling process. 
 It would also be useful to have this information organised in a table, so that you can quickly find the data you need without having to do a lot of calculations based on the property information.
 This project solves that business logic problem. Using an ML model and following MLOps practices, it provides real estate decision-makers with the necessary information in a convenient format whenever it is requested.
-
+<div>
+  <img width="450" height="450" alt="imagen" src="https://github.com/user-attachments/assets/4f2de027-ac88-4830-9df3-b02c6a0685c3"/>
+  <img width="500" height="450" alt="imagen" src="https://github.com/user-attachments/assets/0fb85c8c-c477-4e63-a5f0-4c4c352f0360"/>
+</div>
 *The problem statement and the original data (as input) is based on the book Hands-on Machine Learning with Scikit-Learn, Keras and TensorFlow by Aurélien Géron.
+
 ## How to run the project
 For reference, this project was tested for reproducibility on a fresh GitHub Codespace, but you can use your preferred IDE configuration.
 It is also recommended that you install Anaconda to avoid conflicts with the interpreter and environment when managing dependencies.
