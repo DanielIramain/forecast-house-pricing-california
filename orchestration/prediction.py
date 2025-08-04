@@ -116,5 +116,5 @@ def run():
 if __name__ == "__main__":
     run_id = run()
 
-    with open("run_id.txt", "w") as f:
+    with open("../orchestration/run_id.txt", "w") as f:
         f.write(run_id)
