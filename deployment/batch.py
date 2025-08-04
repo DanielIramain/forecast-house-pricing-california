@@ -41,7 +41,7 @@ def apply_model(input_file, run_id, output_file):
     dicts = prepare_dicts(df)
 
     # Load DictVectorizer
-    with open("../orchestration/models/preprocessor.b", "rb") as f_in:
+    with open("../main/models/preprocessor.b", "rb") as f_in:
         dv = pickle.load(f_in)
     X = dv.transform(dicts)
 
@@ -64,7 +64,7 @@ def run():
     parser.add_argument("--output_name", default="housing_output.csv", help="Output CSV file name")
     args = parser.parse_args()
 
-    input_file = f'../orchestration/datasets/housing/{args.input_name}'
+    input_file = f'../main/datasets/housing/{args.input_name}'
     output_file = f'output/{args.output_name}'
 
     apply_model(input_file=input_file, run_id=run_id, output_file=output_file)

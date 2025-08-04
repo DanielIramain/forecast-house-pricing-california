@@ -4,13 +4,13 @@ import mlflow.sklearn
 
 def test_model_file_exists():
     # Check if the model file exists
-    model_path = "orchestration/models/preprocessor.b"
+    model_path = "main/models/preprocessor.b"
     assert os.path.exists(model_path), f"Model file not found at {model_path}"
 
 def test_model_predict_shape():
     mlflow.set_tracking_uri("http://localhost:5000")
     # Load the model and DictVectorizer
-    with open("orchestration/models/preprocessor.b", "rb") as f:
+    with open("main/models/preprocessor.b", "rb") as f:
         dv = pickle.load(f)
     # Create a dummy input
     sample = [{"ocean_proximity": "INLAND", "median_income": 3.0}]

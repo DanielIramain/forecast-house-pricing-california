@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
+import argparse
 
 import pandas as pd
 
@@ -14,8 +15,12 @@ from evidently.legacy.renderers.html_widgets import WidgetSize
 
 def prepare_report():
     # Prepare data and creates a report based on the data drift preset
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output_name", default="housing_output.csv", help="Output CSV file name")
+    args = parser.parse_args()
+    
+    data = pd.read_csv(f'../main/output/{args.output_name}')
 
-    data = pd.read_csv('../deployment/output/housing_output.csv')
 
     train_data = data[:10000]
     val_data = data[10000:]
