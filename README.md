@@ -1,5 +1,9 @@
 # California House Pricing Prediction
 This is the DTClub MLOps Zoomcamp 2025 repository. The goal of this project is to apply everything we have learned to an end-to-end machine learning project. The following are some guidelines for running and evaluate it.
+<div>
+  <img src="https://github.com/DanielIramain/forecast-house-pricing-california/blob/main/images/architectural-diagram-mlzoomcamp.png"/>
+</div>
+
 ## Introduction: Problem description
 Let's say that you have a real estate business located in California, USA*. One of the main problems in this field is determining a fair market value for a property based on different factors such as the age of the house, location and proximity to the ocean. 
 Furthermore, you would need this information as soon as possible for every new property available on the market. This is because you will have to negotiate in every house buying and selling process. 
